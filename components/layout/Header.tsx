@@ -7,6 +7,7 @@ import { GB, DE } from "country-flag-icons/react/3x2";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { assetPath } from "@/lib/path";
 
 const navKeys = [
   "nav.about",
@@ -39,7 +40,7 @@ export function Header() {
           className="flex items-center font-sans text-lg font-semibold text-foreground"
           aria-label="Stegine"
         >
-          <img src="/logo.svg" alt="" className="h-5 w-auto sm:h-6" />
+          <img src={assetPath("/logo.svg")} alt="" className="h-5 w-auto sm:h-6" />
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">

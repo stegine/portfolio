@@ -6,6 +6,7 @@ import { ExternalLink, FolderKanban, FolderOpen, Github, Lock } from "lucide-rea
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { projects } from "@/content/projects";
+import { assetPath } from "@/lib/path";
 
 export function Projects() {
   const t = useTranslations("projects");
@@ -40,7 +41,7 @@ export function Projects() {
                 {project.image && !project.image.includes("placeholder") ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
-                    src={project.image}
+                    src={assetPath(project.image)}
                     alt=""
                     className="max-h-[85%] max-w-[85%] object-contain"
                     onError={(e) => {

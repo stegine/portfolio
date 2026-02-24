@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 export default function RedirectToLocale({
@@ -7,14 +9,16 @@ export default function RedirectToLocale({
 }: {
   defaultLocale: string;
 }) {
+  const router = useRouter();
+
   useEffect(() => {
-    window.location.replace(`/${defaultLocale}`);
-  }, [defaultLocale]);
+    router.replace(`/${defaultLocale}`);
+  }, [router, defaultLocale]);
 
   return (
     <div style={{ fontFamily: "system-ui", padding: "2rem", textAlign: "center" }}>
       <p>
-        <a href={`/${defaultLocale}`}>Weiter zur Seite →</a>
+        <Link href={`/${defaultLocale}`}>Weiter zur Seite →</Link>
       </p>
     </div>
   );
