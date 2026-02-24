@@ -1,0 +1,105 @@
+{
+  "meta": {
+    "title": "Stefan Weiß | IT Specialist for Application Development",
+    "description": "Portfolio of Stefan Weiß – Fachinformatiker für Anwendungsentwicklung. Java, Kotlin, Spring Boot, React, Angular. Clean code and maintainable software."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "languages": "Languages",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "role": "IT Specialist for Application Development",
+    "tagline": "Focus on object-oriented software development. Solid knowledge in Java, Kotlin and modern frontend technologies. Structured, reliable way of working and high standards for clean, maintainable code.",
+    "ctaProjects": "View Projects",
+    "ctaContact": "Get in Touch"
+  },
+  "about": {
+    "title": "About Me",
+    "text": "Prospective IT specialist for application development with a focus on object-oriented software development. Solid knowledge in Java, Kotlin (incl. Android) and modern frontend technologies. Structured, reliable way of working and high demand for clean, maintainable code.",
+    "nameOriginStegine": "Stegine",
+    "nameOriginPrefix": "a portmanteau of ",
+    "nameOriginStefan": "Stefan",
+    "nameOriginMiddle": " and ",
+    "nameOriginEngineering": "Engineering"
+  },
+  "skills": {
+    "title": "Skills",
+    "languages": "Programming Languages",
+    "frameworks": "Frameworks",
+    "databases": "Databases",
+    "tools": "Tools"
+  },
+  "languages": {
+    "title": "Languages",
+    "native": "Native",
+    "fluent": "Fluent",
+    "business": "Business",
+    "basic": "Basic"
+  },
+  "projects": {
+    "title": "Projects",
+    "viewLive": "View Live",
+    "viewCode": "View Code",
+    "items": [
+      {
+        "title": "Gebäudemanagement Marx",
+        "description": "Custom website for a building management company. Design in Figma, implementation with React and TypeScript, containerized with Docker.",
+        "tech": "React, TypeScript, Docker, Figma"
+      },
+      {
+        "title": "Fewozeno – Booking & Occupancy Plan",
+        "description": "Digital solution for Fewozeno. Booking and occupancy plan for 90+ vacation rentals – central overview and management.",
+        "tech": "In development"
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experience",
+    "tags": {
+      "apprenticeship": "Apprenticeship",
+      "internship": "Internship"
+    },
+    "items": [
+      {
+        "role": "IT Specialist for Application Development",
+        "company": "FleetGO Ainring (formerly Wanko Informationslogistik GmbH)",
+        "period": "09/2023 – Present",
+        "description": "Development and maintenance of warehouse and tour planning software (C++, C#). Involvement in internal projects with Angular, TypeScript, ASP.NET and CI/CD pipeline setup."
+      },
+      {
+        "role": "IT / System Integration",
+        "company": "District Office Berchtesgadener Land, Bad Reichenhall",
+        "period": "05/2022 – 05/2022",
+        "description": "Work across several departments with focus on IT. Support as system integrator, setup and maintenance of workstations. Insights into IT infrastructure and administrative processes."
+      },
+      {
+        "role": "Retail / Store Operations",
+        "company": "adidas Outlet Store, Piding",
+        "period": "10/2021 – 10/2021",
+        "description": "Involvement in branch operations: goods receipt, warehouse organization, customer advice and support in the sales area."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "text": "I'm open to new opportunities and would love to hear from you.",
+    "phone": "Phone",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "copyright": "All rights reserved."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "This page does not exist.",
+    "back": "Back to home"
+  }
+}

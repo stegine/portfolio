@@ -1,0 +1,105 @@
+{
+  "meta": {
+    "title": "Stefan Weiß | Fachinformatiker für Anwendungsentwicklung",
+    "description": "Portfolio von Stefan Weiß – Anwendungsentwicklung mit Java, Kotlin, Spring Boot, React, Angular. Sauberer, wartbarer Code."
+  },
+  "nav": {
+    "home": "Start",
+    "about": "Über mich",
+    "skills": "Skills",
+    "languages": "Sprachen",
+    "projects": "Projekte",
+    "experience": "Erfahrung",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "greeting": "Hi, ich bin",
+    "role": "Fachinformatiker für Anwendungsentwicklung",
+    "tagline": "Schwerpunkt objektorientierte Softwareentwicklung. Fundierte Kenntnisse in Java, Kotlin und modernen Frontend-Technologien. Strukturierte, zuverlässige Arbeitsweise und hoher Anspruch an sauberen, wartbaren Code.",
+    "ctaProjects": "Projekte ansehen",
+    "ctaContact": "Kontakt"
+  },
+  "about": {
+    "title": "Über mich",
+    "text": "Angehender Fachinformatiker für Anwendungsentwicklung mit Schwerpunkt auf objektorientierter Softwareentwicklung. Fundierte Kenntnisse in Java, Kotlin (inkl. Android) sowie modernen Frontend-Technologien. Strukturierte, zuverlässige Arbeitsweise und hoher Anspruch an sauberen, wartbaren Code.",
+    "nameOriginStegine": "Stegine",
+    "nameOriginPrefix": "ein Wortspiel aus ",
+    "nameOriginStefan": "Stefan",
+    "nameOriginMiddle": " und ",
+    "nameOriginEngineering": "Engineering"
+  },
+  "skills": {
+    "title": "Skills",
+    "languages": "Programmiersprachen",
+    "frameworks": "Frameworks",
+    "databases": "Datenbanken",
+    "tools": "Tools"
+  },
+  "languages": {
+    "title": "Sprachkenntnisse",
+    "native": "Muttersprache",
+    "fluent": "Fließend",
+    "business": "Verhandlungssicher",
+    "basic": "Grundkenntnisse"
+  },
+  "projects": {
+    "title": "Projekte",
+    "viewLive": "Live ansehen",
+    "viewCode": "Code ansehen",
+    "items": [
+      {
+        "title": "Gebäudemanagement Marx",
+        "description": "Personalisierte Website für eine Gebäudemanagement-Firma. Design in Figma, Umsetzung mit React und TypeScript, Auslieferung per Docker.",
+        "tech": "React, TypeScript, Docker, Figma"
+      },
+      {
+        "title": "Fewozeno – Buchungs- & Belegungsplan",
+        "description": "Digitale Lösung für Fewozeno. Buchungs- und Belegungsplan mit über 90 Ferienwohnungen – zentrale Übersicht und Verwaltung.",
+        "tech": "In Entwicklung"
+      }
+    ]
+  },
+  "experience": {
+    "title": "Berufserfahrung",
+    "tags": {
+      "apprenticeship": "Ausbildung",
+      "internship": "Praktikum"
+    },
+    "items": [
+      {
+        "role": "Fachinformatiker für Anwendungsentwicklung",
+        "company": "FleetGO Ainring (ehem. Wanko Informationslogistik GmbH)",
+        "period": "09/2023 – heute",
+        "description": "Weiterentwicklung einer Lagersoftware und Tourenplanungssoftware (C++, C#). Beteiligung an internen Projekten mit Angular, TypeScript, ASP.NET sowie Aufbau und Pflege von CI/CD-Pipelines."
+      },
+      {
+        "role": "IT / Systemintegration",
+        "company": "Landratsamt Berchtesgadener Land, Bad Reichenhall",
+        "period": "05/2022 – 05/2022",
+        "description": "Einsatz in mehreren Abteilungen mit Schwerpunkt IT. Unterstützung der IT als Systemintegrator, Einrichtung und Betreuung von Arbeitsplätzen. Einblicke in IT-Infrastruktur und Verwaltungsprozesse."
+      },
+      {
+        "role": "Verkauf / Filialbetrieb",
+        "company": "adidas Outlet Store, Piding",
+        "period": "10/2021 – 10/2021",
+        "description": "Mitarbeit in nahezu allen Bereichen des Filialbetriebs: Warenannahme, Lagerorganisation und Warenpflege, Kundenberatung und Unterstützung im Verkaufsraum."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Kontakt",
+    "text": "Ich bin offen für neue Möglichkeiten und freue mich über eine Nachricht.",
+    "phone": "Telefon",
+    "email": "E-Mail",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "copyright": "Alle Rechte vorbehalten."
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "description": "Diese Seite existiert nicht.",
+    "back": "Zur Startseite"
+  }
+}
