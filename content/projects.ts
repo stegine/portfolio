@@ -15,6 +15,5 @@ export const projects = [
     techKey: "items.1.tech" as const,
     liveUrl: "",
     githubUrl: "",
-    image: "/placeholder-project.png",
   },
 ];
