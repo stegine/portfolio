@@ -1,6 +1,6 @@
 # Portfolio Website
 
-Next.js portfolio with i18n (EN/DE), dark/light theme, Tailwind CSS.
+Next.js portfolio with i18n (EN/DE), dark theme, Tailwind CSS.
 
 ## Setup
 
