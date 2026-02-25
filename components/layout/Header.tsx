@@ -36,6 +36,13 @@ export function Header() {
 
   const isHome = pathname === "/";
 
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (isHome) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   const handleNavClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
     sectionId: string
@@ -62,6 +69,7 @@ export function Header() {
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:h-16 sm:px-6 md:px-8">
         <Link
           href="/"
+          onClick={handleLogoClick}
           className="flex items-center font-sans text-lg font-semibold text-foreground"
           aria-label="Stegine – nach oben"
         >
