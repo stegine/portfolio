@@ -1,6 +1,6 @@
 "use client";
 
-import { Link } from "@/i18n/navigation";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import { useTranslations, useLocale } from "next-intl";
 import { Menu, X, User, Code2, Languages, FolderKanban, Briefcase, Mail } from "lucide-react";
 import { GB, DE } from "country-flag-icons/react/3x2";
@@ -30,18 +30,43 @@ const navItems: { key: (typeof navKeys)[number]; icon: React.ComponentType<{ cla
 export function Header() {
   const t = useTranslations();
   const locale = useLocale();
+  const pathname = usePathname();
+  const router = useRouter();
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const isHome = pathname === "/";
+
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    sectionId: string
+  ) => {
+    if (!isHome) {
+      e.preventDefault();
+      setMobileOpen(false);
+      router.push(`/#${sectionId}`);
+      return;
+    }
+    setMobileOpen(false);
+    const el = document.getElementById(sectionId);
+    if (el) {
+      e.preventDefault();
+      window.history.pushState(null, "", `#${sectionId}`);
+      requestAnimationFrame(() => {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
+  };
 
   return (
     <header className="fixed left-0 right-0 top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:h-16 sm:px-6 md:px-8">
-        <a
-          href="#home"
+        <Link
+          href="/"
           className="flex items-center font-sans text-lg font-semibold text-foreground"
           aria-label="Stegine – nach oben"
         >
           <img src={assetPath("/logo.svg")} alt="" className="h-5 w-auto sm:h-6" />
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
           {navItems.map(({ key, icon: Icon }) => {
@@ -49,7 +74,8 @@ export function Header() {
             return (
               <a
                 key={key}
-                href={`#${sectionId}`}
+                href={isHome ? `#${sectionId}` : `/#${sectionId}`}
+                onClick={(e) => handleNavClick(e, sectionId)}
                 className="flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium text-muted transition-colors hover:text-foreground"
               >
                 <Icon className="h-4 w-4" />
@@ -66,7 +92,7 @@ export function Header() {
             aria-label="Sprache wählen"
           >
             <Link
-              href="/"
+              href={pathname}
               locale="en"
               className={cn(
                 "block transition-opacity hover:opacity-100",
@@ -78,7 +104,7 @@ export function Header() {
               <GB className="h-4 w-6 rounded overflow-hidden" />
             </Link>
             <Link
-              href="/"
+              href={pathname}
               locale="de"
               className={cn(
                 "block transition-opacity hover:opacity-100",
@@ -116,24 +142,12 @@ export function Header() {
                 return (
                   <motion.a
                     key={key}
-                    href={`#${sectionId}`}
+                    href={isHome ? `#${sectionId}` : `/#${sectionId}`}
                     initial={{ opacity: 0, x: -8 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.2, delay: 0.04 * (i + 1) }}
                     className="flex min-h-[48px] items-center gap-3 rounded-xl px-4 py-3 text-base font-medium text-foreground transition-colors active:bg-foreground/10"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setMobileOpen(false);
-                      window.history.pushState(null, "", `#${sectionId}`);
-                      const el = document.getElementById(sectionId);
-                      if (el) {
-                        requestAnimationFrame(() => {
-                          requestAnimationFrame(() => {
-                            el.scrollIntoView({ behavior: "smooth", block: "start" });
-                          });
-                        });
-                      }
-                    }}
+                    onClick={(e) => handleNavClick(e, sectionId)}
                   >
                     <Icon className="h-4 w-4 shrink-0 text-accent" />
                     {t(key)}

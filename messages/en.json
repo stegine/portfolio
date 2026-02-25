@@ -95,7 +95,49 @@
     "linkedin": "LinkedIn"
   },
   "footer": {
-    "copyright": "All rights reserved."
+    "copyright": "All rights reserved.",
+    "privacy": "Privacy",
+    "imprint": "Imprint"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "intro": "The protection of your personal data is important to us. Below we inform you about the processing of data on this website.",
+    "responsible": {
+      "title": "Responsible Party",
+      "text": "The party responsible for data processing on this website is the person named in the imprint."
+    },
+    "hosting": {
+      "title": "Hosting",
+      "text": "This website is hosted by an external provider. In the process, personal data (e.g. IP address, time of access) may be transmitted to the host. Please refer to the provider's privacy policy for details."
+    },
+    "access": {
+      "title": "Access Data",
+      "text": "When you visit this website, access data (e.g. IP address, date, page accessed) are automatically recorded in server logs. These data are used to ensure operation and security and are not combined with other data unless required by law."
+    },
+    "contact": {
+      "title": "Contact",
+      "text": "If you contact us by e-mail or contact form, your details will be processed and stored for the purpose of handling your enquiry."
+    },
+    "rights": {
+      "title": "Your Rights",
+      "text": "You have the right to access, rectification, erasure and restriction of processing of your personal data, as well as to data portability and to object. To exercise these rights, please contact the address given in the imprint. You also have the right to lodge a complaint with a supervisory authority."
+    },
+    "changes": {
+      "title": "Changes",
+      "text": "This privacy policy may be updated as necessary to reflect legal or website changes."
+    }
+  },
+  "imprint": {
+    "title": "Imprint",
+    "responsible": "Responsible for content",
+    "owner": "Owner",
+    "address": "Edelweissstr. 3\n83435 Bad Reichenhall",
+    "contact": "Contact",
+    "vatId": "VAT ID",
+    "dispute": {
+      "title": "Dispute Resolution",
+      "text": "The European Commission provides a platform for online dispute resolution (OS): https://ec.europa.eu/consumers/odr. We are not obliged and not willing to participate in dispute resolution proceedings before a consumer arbitration board."
+    }
   },
   "notFound": {
     "title": "Page not found",

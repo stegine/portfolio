@@ -95,7 +95,49 @@
     "linkedin": "LinkedIn"
   },
   "footer": {
-    "copyright": "Alle Rechte vorbehalten."
+    "copyright": "Alle Rechte vorbehalten.",
+    "privacy": "Datenschutz",
+    "imprint": "Impressum"
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "intro": "Der Schutz Ihrer persönlichen Daten ist uns wichtig. Nachstehend informieren wir Sie über die Verarbeitung von Daten auf dieser Website.",
+    "responsible": {
+      "title": "Verantwortliche Stelle",
+      "text": "Verantwortlich für die Datenverarbeitung auf dieser Website ist die im Impressum genannte Person."
+    },
+    "hosting": {
+      "title": "Hosting",
+      "text": "Diese Website wird bei einem externen Anbieter gehostet. Dabei können personenbezogene Daten (z. B. IP-Adresse, Zugriffszeitpunkt) an den Hoster übermittelt werden. Details entnehmen Sie der Datenschutzerklärung des jeweiligen Anbieters."
+    },
+    "access": {
+      "title": "Zugriffsdaten",
+      "text": "Beim Aufruf dieser Website werden automatisch Zugriffsdaten (z. B. IP-Adresse, Datum, aufgerufene Seite) in Server-Logs erfasst. Diese Daten dienen der Sicherstellung des Betriebs und der Sicherheit und werden nicht mit anderen Daten zusammengeführt, sofern nicht gesetzlich erforderlich."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "text": "Wenn Sie uns per E-Mail oder Kontaktformular anschreiben, werden Ihre Angaben zur Bearbeitung Ihrer Anfrage verarbeitet und gespeichert."
+    },
+    "rights": {
+      "title": "Ihre Rechte",
+      "text": "Sie haben ein Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer personenbezogenen Daten sowie auf Datenübertragbarkeit und Widerspruch. Für die Geltendmachung wenden Sie sich an die im Impressum genannte Kontaktadresse. Sie haben zudem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren."
+    },
+    "changes": {
+      "title": "Änderungen",
+      "text": "Diese Datenschutzerklärung kann bei Bedarf angepasst werden, um sie an geänderte Rechtslage oder die Website anzugleichen."
+    }
+  },
+  "imprint": {
+    "title": "Impressum",
+    "responsible": "Verantwortlich für den Inhalt nach § 5 TMG",
+    "owner": "Inhaber",
+    "address": "Edelweissstr. 3\n83435 Bad Reichenhall",
+    "contact": "Kontakt",
+    "vatId": "USt-ID",
+    "dispute": {
+      "title": "Streitschlichtung",
+      "text": "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr. Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen."
+    }
   },
   "notFound": {
     "title": "Seite nicht gefunden",
