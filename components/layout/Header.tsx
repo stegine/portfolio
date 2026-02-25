@@ -35,13 +35,13 @@ export function Header() {
   return (
     <header className="fixed left-0 right-0 top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:h-16 sm:px-6 md:px-8">
-        <Link
-          href="/"
+        <a
+          href="#home"
           className="flex items-center font-sans text-lg font-semibold text-foreground"
-          aria-label="Stegine"
+          aria-label="Stegine – nach oben"
         >
           <img src={assetPath("/logo.svg")} alt="" className="h-5 w-auto sm:h-6" />
-        </Link>
+        </a>
 
         <nav className="hidden items-center gap-1 md:flex">
           {navItems.map(({ key, icon: Icon }) => {

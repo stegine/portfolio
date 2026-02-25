@@ -46,7 +46,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.3 }}
-          className="mx-auto mt-6 max-w-2xl text-lg text-muted leading-relaxed sm:mt-8 sm:text-xl md:text-[1.25rem]"
+          className="mx-auto mt-6 max-w-2xl text-base text-muted leading-relaxed sm:mt-8 sm:text-lg md:text-[1.0625rem]"
         >
           {t("tagline")}
         </motion.p>
