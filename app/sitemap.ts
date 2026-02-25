@@ -3,6 +3,8 @@ import { routing } from "@/i18n/routing";
 
 export const dynamic = "force-static";
 
+const staticPaths = ["", "/privacy", "/imprint"] as const;
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl =
     process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ?? "https://stegine.com";
@@ -12,14 +14,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes: MetadataRoute.Sitemap = [];
 
   for (const locale of routing.locales) {
-    const path = locale === routing.defaultLocale ? "" : `/${locale}`;
-    const url = path ? `${origin}${path}` : origin;
-    routes.push({
-      url,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: locale === routing.defaultLocale ? 1 : 0.9,
-    });
+    const localePrefix = locale === routing.defaultLocale ? "" : `/${locale}`;
+    const isDefaultLocale = locale === routing.defaultLocale;
+    for (const path of staticPaths) {
+      const pathSegment = path === "" ? localePrefix : `${localePrefix}${path}`;
+      const url = pathSegment ? `${origin}${pathSegment}` : origin;
+      routes.push({
+        url,
+        lastModified: new Date(),
+        changeFrequency: path === "" ? "monthly" : "yearly",
+        priority: path === "" ? (isDefaultLocale ? 1 : 0.9) : 0.5,
+      });
+    }
   }
 
   return routes;
