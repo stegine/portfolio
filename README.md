@@ -20,7 +20,15 @@ pnpm start
 
 ## Environment
 
-- `NEXT_PUBLIC_SITE_URL` – Production URL for hreflang/canonical. Optional.
+- `NEXT_PUBLIC_SITE_URL` – Production URL for hreflang, canonical, sitemap and robots. **Set this for production** (e.g. `https://stegine.com`).
+- `NEXT_PUBLIC_BASE_PATH` – Optional base path (e.g. for GitHub Pages subpath).
+
+## SEO
+
+- **Sitemap:** `/sitemap.xml` (generated at build).
+- **Robots:** `/robots.txt` (allows all, points to sitemap).
+- **Metadata:** Title, description, Open Graph, canonical and hreflang (when `NEXT_PUBLIC_SITE_URL` is set).
+- **Structured data:** Person JSON-LD on the page for rich results.
 
 ## Content
 

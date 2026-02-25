@@ -3,6 +3,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { Syne, DM_Sans } from "next/font/google";
 import { notFound } from "next/navigation";
+import { PersonJsonLd } from "@/components/PersonJsonLd";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 
@@ -19,7 +20,9 @@ const dmSans = DM_Sans({
 });
 
 export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
+  return routing.locales
+    .filter((locale) => locale !== routing.defaultLocale)
+    .map((locale) => ({ locale }));
 }
 
 export async function generateMetadata({
@@ -42,15 +45,46 @@ export async function generateMetadata({
   };
 
   if (baseUrl) {
+    const base = baseUrl.replace(/\/$/, "");
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH?.replace(/\/$/, "") ?? "";
+    const origin = basePath ? `${base}${basePath}` : base;
+    const canonical =
+      locale === routing.defaultLocale ? origin : `${origin}/${locale}`;
     metadata.alternates = {
+      canonical,
       languages: {
-        en: `${baseUrl}/en`,
-        de: `${baseUrl}/de`,
+        en: origin,
+        de: `${origin}/de`,
       },
     };
   }
 
   return metadata;
+}
+
+export async function LocaleLayoutContent({
+  locale,
+  children,
+}: {
+  locale: string;
+  children: React.ReactNode;
+}) {
+  if (!routing.locales.includes(locale as "en" | "de")) {
+    notFound();
+  }
+  setRequestLocale(locale);
+  const messages = await getMessages();
+
+  return (
+    <NextIntlClientProvider messages={messages}>
+      <PersonJsonLd />
+      <div
+        className={`${syne.variable} ${dmSans.variable} min-h-screen font-sans`}
+      >
+        {children}
+      </div>
+    </NextIntlClientProvider>
+  );
 }
 
 type LocaleLayoutProps = {
@@ -63,19 +97,5 @@ export default async function LocaleLayout({
   params,
 }: LocaleLayoutProps) {
   const { locale } = await params;
-  if (!routing.locales.includes(locale as "en" | "de")) {
-    notFound();
-  }
-  setRequestLocale(locale);
-  const messages = await getMessages();
-
-  return (
-    <NextIntlClientProvider messages={messages}>
-      <div
-        className={`${syne.variable} ${dmSans.variable} min-h-screen font-sans`}
-      >
-        {children}
-      </div>
-    </NextIntlClientProvider>
-  );
+  return <LocaleLayoutContent locale={locale}>{children}</LocaleLayoutContent>;
 }

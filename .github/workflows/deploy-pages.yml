@@ -16,6 +16,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_SITE_URL: https://stegine.com
     steps:
       - name: Checkout
         uses: actions/checkout@v4

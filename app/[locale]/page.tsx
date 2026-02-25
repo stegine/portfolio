@@ -9,14 +9,7 @@ import { Experience } from "@/components/sections/Experience";
 import { Contact } from "@/components/sections/Contact";
 import { setRequestLocale } from "next-intl/server";
 
-type PageProps = {
-  params: Promise<{ locale: string }>;
-};
-
-export default async function HomePage({ params }: PageProps) {
-  const { locale } = await params;
-  setRequestLocale(locale);
-
+export function HomeContent() {
   return (
     <>
       <Header />
@@ -32,4 +25,14 @@ export default async function HomePage({ params }: PageProps) {
       <Footer />
     </>
   );
+}
+
+type PageProps = {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function HomePage({ params }: PageProps) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  return <HomeContent />;
 }
